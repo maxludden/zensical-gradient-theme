@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1366 400">
+  <defs>
+    <style>
+      /* Light variant: fixed colors so the docs theme toggle, not the
+         reader's system setting, decides which banner shows. */
+      :root {
+        --text-color: #353535;
+      }
+
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#logo-gradient-a);
+      }
+
+      .cls-2b {
+        fill: url(#logo-gradient-b);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+
+        animate,
+        animateTransform {
+          display: none;
+        }
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-6 {
+        fill: var(--text-color);
+        font-family: Urbanist-Bold, Urbanist;
+        font-size: 86.46px;
+        font-weight: 700;
+      }
+
+      .cls-7 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .cls-15 {
+        fill: transparent;
+      }
+
+      .cls-16 {
+        letter-spacing: 0em;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1=".81" y1="769.78" x2="1.04" y2="769.78"
+      gradientTransform="translate(-71729.6418 -124629.6904) rotate(149.9989) scale(187.1551 -187.1551)"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000" stop-opacity=".7" />
+      <stop offset=".25" stop-color="#000" stop-opacity=".4" />
+      <stop offset=".8" stop-color="#000" stop-opacity="0" />
+      <stop offset="1" stop-color="#000" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="8.65" y1="782.58" x2="8.88" y2="782.58"
+      gradientTransform="translate(116749.3398 1564.5875) rotate(-90) scale(148.9389 -148.9389)"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000" stop-opacity="0" />
+      <stop offset=".2" stop-color="#000" stop-opacity="0" />
+      <stop offset=".75" stop-color="#000" stop-opacity=".4" />
+      <stop offset="1" stop-color="#000" stop-opacity=".7" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="6.41" y1="781.53" x2="6.64" y2="781.53"
+      gradientTransform="translate(130100.7551 1274.8337) rotate(-90) scale(166.2522 -166.2522)"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000" stop-opacity="0" />
+      <stop offset=".2" stop-color="#000" stop-opacity="0" />
+      <stop offset=".75" stop-color="#000" stop-opacity=".4" />
+      <stop offset="1" stop-color="#000" stop-opacity=".7" />
+    </linearGradient>
+    <!-- Animated gradients copied from MaxLogo_3.0.2 (circle fill) -->
+    <linearGradient id="logo-gradient-a" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff00ff">
+        <animate attributeName="stop-color"
+          values="#ff00ff;#af00ff;#5f00ff;#0090ff;#00ffff;#00ff00;#99ff00;#ffff00;#ff8800;#ff0000;#ff00ff" dur="20s"
+          repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#af00ff">
+        <animate attributeName="stop-color"
+          values="#af00ff;#5f00ff;#0088ff;#00ffff;#00ff00;#99ff00;#ffff00;#ff8800;#ff0000;#ff00ff;#af00ff" dur="20s"
+          repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#5f00ff">
+        <animate attributeName="stop-color"
+          values="#5f00ff;#0090ff;#00ffff;#00ff00;#99ff00;#ffff00;#ff8800;#ff0000;#ff00ff;#af00ff;#5f00ff" dur="20s"
+          repeatCount="indefinite" />
+      </stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="20s"
+        repeatCount="indefinite" />
+    </linearGradient>
+    <linearGradient id="logo-gradient-b" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff00ff">
+        <animate attributeName="stop-color"
+          values="#ff00ff;#af00ff;#5f00ff;#0090ff;#00ffff;#00ff00;#99ff00;#ffff00;#ff8800;#ff0000;#ff00ff" dur="20s"
+          repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#af00ff" stop-opacity="0.1">
+        <animate attributeName="stop-color"
+          values="#af00ff;#5f00ff;#0088ff;#00ffff;#00ff00;#99ff00;#ffff00;#ff8800;#ff0000;#ff00ff;#af00ff" dur="20s"
+          repeatCount="indefinite" />
+      </stop>
+      <animateTransform attributeName="gradientTransform" type="rotate" values="360 .5 .5;0 .5 .5" dur="20s"
+        repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+  <rect class="cls-15" width="1366" height="400" />
+  <g>
+    <g id="ArtBoard1">
+      <rect class="cls-1" x="87.11" y="110.87" width="175.73" height="178.27" />
+      <path class="cls-2"
+        d="M174.97,122.28c42.32,0,76.61,34.8,76.61,77.72,0,11.45-2.41,22.3-6.81,32.1-2.69,6.04-8.29,9.67-14.79,9.67h-33.72l4.61,12.88c1.72,4.75,1.31,9.49-1.21,13.89-2.47,4.36-6.33,7.12-11.25,7.99-4.37.8-8.85,1.19-13.45,1.19-42.32,0-76.61-34.8-76.61-77.72,0-11.48,2.47-22.4,6.88-32.22,2.72-6,8.29-9.67,14.79-9.67h33.58l-4.58-12.74c-1.69-4.75-1.28-9.52,1.21-13.89,2.47-4.36,6.33-7.12,11.25-7.99,4.37-.8,8.88-1.22,13.48-1.22h.01ZM234.04,227.19c3.72-8.27,5.78-17.48,5.78-27.19,0-36.33-29.04-65.75-64.84-65.75-3.89,0-7.7.35-11.42,1.02-1.31.25-2.37.97-3.06,2.17-.65,1.19-.76,2.48-.31,3.77l6.09,16.92h31.48c7.47,0,13.8,4.92,15.72,12.25,1.93,7.33-1.1,14.77-7.57,18.57l-23.64,13.82,9.7,27.08h38.05c1.76,0,3.27-1.02,4.02-2.65h-.01ZM170.54,170.09l7.6,21.18,21.88-12.81c1.76-1.05,2.58-3.07,2.06-5.06-.52-1.99-2.24-3.32-4.27-3.32h-27.28.01ZM115.98,172.72c-3.75,8.31-5.81,17.55-5.81,27.29,0,36.33,29,65.78,64.81,65.78,3.89,0,7.7-.35,11.39-1.02,2.72-.49,4.33-3.32,3.37-5.94l-6.12-17.07h-30.99c-7.47,0-13.76-4.92-15.69-12.22-1.96-7.33,1.1-14.8,7.57-18.57l23.19-13.61-9.77-27.3h-37.91c-1.76,0-3.27.97-4.02,2.62h-.02ZM179.35,229.84l-7.54-20.94-21.47,12.56c-1.76,1.05-2.58,3.07-2.06,5.06.55,1.99,2.27,3.32,4.3,3.32h26.77Z" />
+      <path class="cls-2b"
+        d="M174.97,122.28c42.32,0,76.61,34.8,76.61,77.72,0,11.45-2.41,22.3-6.81,32.1-2.69,6.04-8.29,9.67-14.79,9.67h-33.72l4.61,12.88c1.72,4.75,1.31,9.49-1.21,13.89-2.47,4.36-6.33,7.12-11.25,7.99-4.37.8-8.85,1.19-13.45,1.19-42.32,0-76.61-34.8-76.61-77.72,0-11.48,2.47-22.4,6.88-32.22,2.72-6,8.29-9.67,14.79-9.67h33.58l-4.58-12.74c-1.69-4.75-1.28-9.52,1.21-13.89,2.47-4.36,6.33-7.12,11.25-7.99,4.37-.8,8.88-1.22,13.48-1.22h.01ZM234.04,227.19c3.72-8.27,5.78-17.48,5.78-27.19,0-36.33-29.04-65.75-64.84-65.75-3.89,0-7.7.35-11.42,1.02-1.31.25-2.37.97-3.06,2.17-.65,1.19-.76,2.48-.31,3.77l6.09,16.92h31.48c7.47,0,13.8,4.92,15.72,12.25,1.93,7.33-1.1,14.77-7.57,18.57l-23.64,13.82,9.7,27.08h38.05c1.76,0,3.27-1.02,4.02-2.65h-.01ZM170.54,170.09l7.6,21.18,21.88-12.81c1.76-1.05,2.58-3.07,2.06-5.06-.52-1.99-2.24-3.32-4.27-3.32h-27.28.01ZM115.98,172.72c-3.75,8.31-5.81,17.55-5.81,27.29,0,36.33,29,65.78,64.81,65.78,3.89,0,7.7-.35,11.39-1.02,2.72-.49,4.33-3.32,3.37-5.94l-6.12-17.07h-30.99c-7.47,0-13.76-4.92-15.69-12.22-1.96-7.33,1.1-14.8,7.57-18.57l23.19-13.61-9.77-27.3h-37.91c-1.76,0-3.27.97-4.02,2.62h-.02ZM179.35,229.84l-7.54-20.94-21.47,12.56c-1.76,1.05-2.58,3.07-2.06,5.06.55,1.99,2.27,3.32,4.3,3.32h26.77Z" />
+      <path class="cls-5"
+        d="M152.61,241.77v-11.94h-.03c-2.03,0-3.75-1.33-4.3-3.32-.52-1.99.31-4.01,2.06-5.06l21.47-12.56-4.13-11.51-23.19,13.61c-6.47,3.77-9.53,11.23-7.57,18.57,1.93,7.3,8.22,12.22,15.69,12.22h-.01Z" />
+      <path class="cls-4"
+        d="M196.27,241.77l4.61,12.88c1.72,4.75,1.31,9.49-1.21,13.89-2.47,4.36-6.33,7.12-11.25,7.99l-2.06-11.76c2.72-.49,4.33-3.32,3.37-5.94l-6.12-17.07h12.66Z" />
+      <path class="cls-3" d="M157.91,170.09h12.63l11.73,32.66-10.46,6.14-13.89-38.81Z" />
+    </g>
+    <text class="cls-6" transform="translate(294.16 225.94)">
+      <tspan class="cls-7" x="0" y="0">Z</tspan>
+      <tspan class="cls-13" x="57.41" y="0">e</tspan>
+      <tspan x="105.01" y="0">n</tspan>
+      <tspan class="cls-14" x="154.38" y="0">s</tspan>
+      <tspan x="191.86" y="0">i</tspan>
+      <tspan class="cls-9" x="211.48" y="0">c</tspan>
+      <tspan x="254.28" y="0">al </tspan>
+      <tspan class="cls-16" x="348.48" y="0">G</tspan>
+      <tspan class="cls-12" x="412.93" y="0">r</tspan>
+      <tspan class="cls-10" x="443.28" y="0">a</tspan>
+      <tspan x="495.24" y="0">di</tspan>
+      <tspan class="cls-13" x="567.82" y="0">e</tspan>
+      <tspan x="615.42" y="0">nt </tspan>
+      <tspan class="cls-8" x="716.01" y="0">T</tspan>
+      <tspan class="cls-11" x="768.58" y="0">h</tspan>
+      <tspan class="cls-13" x="815.62" y="0">e</tspan>
+      <tspan class="cls-10" x="863.21" y="0">m</tspan>
+      <tspan x="936.36" y="0">e</tspan>
+    </text>
+  </g>
+</svg>

@@ -1,4 +1,5 @@
-![Zensical Gradient Theme Banner](img/zensical-gradient-theme-banner.svg)
+![Zensical Gradient Theme Banner](img/zensical-gradient-theme-banner-light.svg#only-light)
+![Zensical Gradient Theme Banner](img/zensical-gradient-theme-banner-dark.svg#only-dark)
 
 # Zensical Gradient Theme
 

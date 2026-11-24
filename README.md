@@ -1,4 +1,8 @@
-![Zensical Gradient Theme Banner](https://raw.githubusercontent.com/maxludden/zensical-gradient-theme/main/docs/img/zensical-gradient-theme-banner.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/maxludden/zensical-gradient-theme/main/docs/img/zensical-gradient-theme-banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/maxludden/zensical-gradient-theme/main/docs/img/zensical-gradient-theme-banner-light.svg">
+  <img alt="Zensical Gradient Theme Banner" src="https://raw.githubusercontent.com/maxludden/zensical-gradient-theme/main/docs/img/zensical-gradient-theme-banner.svg">
+</picture>
 
 # zensical-gradient-theme
 
