@@ -2,9 +2,11 @@
 
 # zensical-gradient-theme
 
-[![PyPI](https://img.shields.io/pypi/v/zensical-gradient-theme)](https://pypi.org/project/zensical-gradient-theme/) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)   
+[![PyPI](https://img.shields.io/pypi/v/zensical-gradient-theme)](https://pypi.org/project/zensical-gradient-theme/) [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-8055ff)](https://maxludden.github.io/zensical-gradient-theme/) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)   
 
 Gradient Theme is an installable [Zensical](https://zensical.org) theme that adds animated rainbow gradients to your docs. Links, the site title, the rule under each page title and every admonition shimmer over purple light and dark color schemes. Install it from PyPI and set `name = "gradient"`; no extra CSS or JavaScript is needed.
+
+See it in action in the [documentation](https://maxludden.github.io/zensical-gradient-theme/).
 
 What it gives you:
 

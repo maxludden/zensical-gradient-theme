@@ -2,6 +2,7 @@
 [project]
 site_name = "Zensical Gradient Theme"
 site_description = "Preview of the zensical-gradient-theme."
+site_url = "https://maxludden.github.io/zensical-gradient-theme/"
 repo_name = "zensical-gradient-theme"
 repo_url = "https://github.com/maxludden/zensical-gradient-theme"
 nav = [

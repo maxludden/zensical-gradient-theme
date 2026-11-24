@@ -20,6 +20,7 @@ classifiers = [
 ]
 
 [project.urls]
+Documentation = "https://maxludden.github.io/zensical-gradient-theme/"
 Repository = "https://github.com/maxludden/zensical-gradient-theme"
 PyPI = "https://pypi.org/project/zensical-gradient-theme/"
 
