@@ -12,6 +12,8 @@ Gradient Theme is an installable [Zensical](https://zensical.org) theme that add
 
 See it in action in the [documentation](https://maxludden.github.io/zensical-gradient-theme/).
 
+[![The docs home page in the dark scheme, showing the gradient site title, the rainbow rule under the page title and rainbow links](https://raw.githubusercontent.com/maxludden/zensical-gradient-theme/main/docs/img/example.png)](https://maxludden.github.io/zensical-gradient-theme/)
+
 What it gives you:
 
 - `gradient-dark` and `gradient-light` color schemes, with a system / light / dark toggle
