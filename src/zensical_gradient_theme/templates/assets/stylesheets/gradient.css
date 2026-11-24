@@ -6,6 +6,8 @@
  * the reader asks for reduced motion.
  */
 
+/* MARK: - Brand palette */
+
 :root {
     /* Brand palette */
     --black: #261230;
@@ -33,6 +35,8 @@
     /* Gradient-bars icon used for note admonitions */
     --md-admonition-icon--note: url('data:image/svg+xml;charset=utf-8,<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1 {stroke-width: 0px;}</style></defs><path id="gradient_icon" class="cls-1" d="m21.16.94H2.84c-1.05,0-1.9.85-1.9,1.9v18.32c0,1.05.85,1.9,1.9,1.9h18.32c1.05,0,1.9-.85,1.9-1.9V2.84c0-1.05-.85-1.9-1.9-1.9Zm1.4,18.1H1.44v-.19h21.13v.19Zm0-3.09H1.44v-.3h21.13v.3Zm0-3.1H1.44v-.5h21.13v.5Zm0-3H1.44v-.9h21.13v.9Zm0-2.9H1.44v-1.4h21.13v1.4Zm0-2.9H1.44v-1.21c0-.25.06-.48.18-.69h20.76c.12.21.18.44.18.69v1.21Z" /></svg>');
 }
+
+/* MARK: - Tables */
 
 [data-md-color-scheme="gradient-dark"] table {
     border-collapse: collapse;
@@ -78,11 +82,14 @@ table.params th:nth-child(even) {
     background: #321744;
 }
 
+/* MARK: - Light scheme */
+
 [data-md-color-scheme="gradient-light"] {
     /* Base colors */
     --md-default-bg-color: #ffffff;
     --md-default-bg-color--dark: #f6f7fb;
-    --md-default-fg-color: #2d183b; /* deep purple text */
+    --md-default-fg-color: #2d183b;
+    /* deep purple text */
     --md-default-fg-color--light: #443057;
     --md-default-fg-color--lighter: #6a5780;
 
@@ -97,21 +104,28 @@ table.params th:nth-child(even) {
     --md-typeset-mark-color: #fff2a8;
 
     --md-code-fg-color: #2d183b;
-    --md-code-bg-color: #f6f8fa; /* neutral light code background */
+    --md-code-bg-color: #f6f8fa;
+    /* neutral light code background */
 
     /* Code highlight tokens (ensure good contrast in light mode) */
     --md-code-hl-comment-color: #6e7781;
     --md-code-hl-punctuation-color: #6e7781;
     --md-code-hl-generic-color: #8e63c7;
     --md-code-hl-variable-color: #1f2328;
-    --md-code-hl-string-color: #0a7b83; /* teal-ish */
-    --md-code-hl-keyword-color: #7c3aed; /* purple */
+    --md-code-hl-string-color: #0a7b83;
+    /* teal-ish */
+    --md-code-hl-keyword-color: #7c3aed;
+    /* purple */
     --md-code-hl-operator-color: #7c3aed;
-    --md-code-hl-number-color: #b45309; /* warm brown */
+    --md-code-hl-number-color: #b45309;
+    /* warm brown */
     --md-code-hl-special-color: #b45309;
-    --md-code-hl-function-color: #14532d; /* green */
-    --md-code-hl-constant-color: #a21caf; /* magenta */
-    --md-code-hl-name-color: #111827; /* headings/idents */
+    --md-code-hl-function-color: #14532d;
+    /* green */
+    --md-code-hl-constant-color: #a21caf;
+    /* magenta */
+    --md-code-hl-name-color: #111827;
+    /* headings/idents */
 
     /* Tables */
     --md-typeset-table-color: rgba(0, 0, 0, 0.08);
@@ -139,6 +153,8 @@ table.params th:nth-child(even) {
     color: #2d183b;
     background: #f7f7f9;
 }
+
+/* MARK: - Dark scheme */
 
 [data-md-color-scheme="gradient-dark"] {
     --md-default-bg-color: var(--galaxy);
@@ -195,6 +211,8 @@ table.params th:nth-child(even) {
     --md-shadow-z3: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4), 0 0 0.05rem rgba(0, 0, 0, 0.5);
 }
 
+/* MARK: - Light/dark-only images */
+
 [data-md-color-scheme="gradient-light"] img[src$="#only-dark"],
 [data-md-color-scheme="gradient-light"] img[src$="#gh-dark-mode-only"] {
     display: none;
@@ -219,6 +237,8 @@ table.params th:nth-child(even) {
     /* Show dark images in dark mode */
 }
 
+/* MARK: - Table layout fixes */
+
 /* See: https://github.com/squidfunk/mkdocs-material/issues/175#issuecomment-616694465 */
 .md-typeset__table {
     min-width: 100%;
@@ -227,6 +247,8 @@ table.params th:nth-child(even) {
 .md-typeset table:not([class]) {
     display: table;
 }
+
+/* MARK: - Copy toast */
 
 /* Toast for copy-to-clipboard: an animated rainbow border (the same layering
    as the gradient admonitions) around rainbow text. The JS wraps the message in
@@ -268,13 +290,16 @@ table.params th:nth-child(even) {
     transform: translateX(-50%) translateY(0);
 }
 
+/* MARK: - Page background */
+
 /* Let the theme colours drive the page background */
 html,
 body {
     background: var(--md-default-bg-color);
 }
 
-/* ---- Animated rainbow accent ------------------------------------------ */
+/* MARK: - Animated rainbow accent */
+
 [data-md-color-scheme="gradient-light"] {
     /* darken the spectrum so it stays readable on white */
     --gradient-keep: 68%;
@@ -361,12 +386,14 @@ body {
     }
 }
 
+/* MARK: - Inline code in links */
+
 /* Inline code inside a link: plain text normally, rainbow on hover.
    The code element paints its own background and inherits the link's
    transparent text fill, which hid the text. Keep the normal text color, and
    on hover fade the fill to transparent so a rainbow layer clipped to the text
    shows through while it animates. */
-.md-typeset a:not(.headerlink):not(.md-button) > code {
+.md-typeset a:not(.headerlink):not(.md-button)>code {
     background-image: var(--gradient-rainbow),
         linear-gradient(var(--md-code-bg-color), var(--md-code-bg-color));
     background-size: 200% 100%, auto;
@@ -378,7 +405,7 @@ body {
     transition: -webkit-text-fill-color 0.35s ease;
 }
 
-.md-typeset a:not(.headerlink):not(.md-button):is(:hover, :focus-visible) > code {
+.md-typeset a:not(.headerlink):not(.md-button):is(:hover, :focus-visible)>code {
     -webkit-text-fill-color: transparent;
     animation-play-state: running;
 }
@@ -389,8 +416,9 @@ body {
     }
 }
 
-/* ---- Gradient admonitions ----------------------------------------------
-   Every admonition and collapsible block gets an animated gradient border, a
+/* MARK: - Gradient admonitions */
+
+/* Every admonition and collapsible block gets an animated gradient border, a
    title bar tinted with that gradient, and an icon filled with it. Each type
    has its own three-color gradient around its usual hue (warning stays orange,
    danger red, ...) so the type still reads at a glance. Notes, and any type
@@ -416,6 +444,8 @@ body {
     background-size: 100% 100%, 200% 100%;
     animation: gradient-admonition-shift 8s linear infinite;
 }
+
+/* MARK: Per-type gradient stops */
 
 /* abstract, summary, tldr: sky to aqua */
 [data-md-color-scheme] .md-typeset :is(.admonition, details).abstract,
@@ -509,22 +539,22 @@ body {
     --gradient-stop-3: #757575;
 }
 
+/* MARK: Title tint, icon fill and rainbow fallback */
+
 /* Notes and custom types have no stops of their own: use the rainbow.
    The :not() list adds specificity, so this beats the base rule above. */
-[data-md-color-scheme] .md-typeset :is(.admonition, details):not(
-    .abstract, .summary, .tldr, .info, .todo, .tip, .hint, .important,
+[data-md-color-scheme] .md-typeset :is(.admonition, details):not(.abstract, .summary, .tldr, .info, .todo, .tip, .hint, .important,
     .success, .check, .done, .question, .help, .faq, .warning, .caution,
     .attention, .failure, .fail, .missing, .danger, .error, .bug, .example,
     .quote, .cite) {
     --gradient-admonition: var(--gradient-rainbow);
 }
 
-[data-md-color-scheme] .md-typeset :is(.admonition, details) > :is(.admonition-title, summary) {
+[data-md-color-scheme] .md-typeset :is(.admonition, details)> :is(.admonition-title, summary) {
     background-color: transparent;
     /* A mostly opaque layer of the page color over the gradient gives a tint. */
     background-image:
-        linear-gradient(
-            color-mix(in srgb, var(--md-admonition-bg-color) 80%, transparent),
+        linear-gradient(color-mix(in srgb, var(--md-admonition-bg-color) 80%, transparent),
             color-mix(in srgb, var(--md-admonition-bg-color) 80%, transparent)),
         var(--gradient-admonition);
 }
@@ -532,7 +562,7 @@ body {
 /* Fill every icon with its type's gradient. The base theme already masks the
    icon shape onto ::before, so only the fill changes; notes swap in the
    gradient-bars icon. */
-[data-md-color-scheme] .md-typeset :is(.admonition, details) > :is(.admonition-title, summary)::before {
+[data-md-color-scheme] .md-typeset :is(.admonition, details)> :is(.admonition-title, summary)::before {
     background-color: transparent;
     background-image: var(--gradient-admonition);
     background-size: 200% 100%;
@@ -544,6 +574,8 @@ body {
     mask-image: var(--md-admonition-icon--note);
 }
 
+/* MARK: Admonition animation */
+
 @keyframes gradient-admonition-shift {
     to {
         background-position: 0 0, -200% 0;
@@ -551,21 +583,22 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .md-typeset a > code {
+    .md-typeset a>code {
         animation: none;
         transition: none;
     }
 
     /* Placed after the admonition rules: same specificity, so order decides. */
     [data-md-color-scheme] .md-typeset :is(.admonition, details),
-    [data-md-color-scheme] .md-typeset :is(.admonition, details) > :is(.admonition-title, summary)::before {
+    [data-md-color-scheme] .md-typeset :is(.admonition, details)> :is(.admonition-title, summary)::before {
         animation: none;
     }
 }
 
-/* ==== API reference (mkdocstrings) and helpers ==== */
+/* MARK: - API reference (mkdocstrings) and helpers */
 
-/* Typography */
+/* MARK: Typography */
+
 .badges {
     display: inline-flex;
     flex-wrap: wrap;
@@ -625,7 +658,8 @@ body {
     color: var(--md-default-fg-color--light);
 }
 
-/* Code and inline code */
+/* MARK: Code and inline code */
+
 .md-typeset code {
     font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     background-color: var(--md-code-bg-color);
@@ -638,6 +672,8 @@ body {
     background: var(--md-code-bg-color);
     padding: 1rem 1.25rem;
 }
+
+/* MARK: Object cards */
 
 /* Card-like containers for objects */
 .md-typeset .doc.doc-object {
@@ -673,6 +709,8 @@ body {
 .md-typeset .doc.doc-children>.doc.doc-object {
     margin: 0.5rem 0 0.75rem;
 }
+
+/* MARK: Parameter tables */
 
 /* Parameter/return tables created by mkdocstrings */
 .md-typeset .doc table {
@@ -760,6 +798,8 @@ body {
     color: var(--md-default-fg-color--light);
 }
 
+/* MARK: Labels */
+
 /* Pills for labels (e.g., staticmethod, property) */
 .md-typeset .doc .doc-labels {
     display: inline-flex;
@@ -776,6 +816,8 @@ body {
     border: 1px solid color-mix(in srgb, var(--md-accent-fg-color) 50%, transparent);
     color: var(--md-accent-fg-color);
 }
+
+/* MARK: Source code blocks */
 
 /* Source code details block */
 .md-typeset details.quote>summary {
@@ -803,6 +845,8 @@ body {
     color: var(--md-default-fg-color--light);
     font-weight: 600;
 }
+
+/* MARK: Helpers */
 
 /* Keep versions and banners subtle if used */
 .version {
