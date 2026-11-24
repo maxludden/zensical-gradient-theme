@@ -1,0 +1,55 @@
+[project]
+name = "zensical-gradient-theme"
+version = "0.1.0"
+description = "An installable Zensical theme with animated rainbow-gradient accents and purple light/dark color schemes, built for Rich-style Python project docs."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Maxwell Ludden", email = "maxludden@me.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "zensical>=0.1.3",
+]
+keywords = ["zensical", "mkdocs", "theme", "documentation", "gradient"]
+classifiers = [
+    "Framework :: MkDocs",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+]
+
+[project.urls]
+Repository = "https://github.com/maxludden/zensical-gradient-theme"
+
+# Zensical loads installable themes from the MkDocs theme entry-point group.
+[project.entry-points."mkdocs.themes"]
+gradient = "zensical_gradient_theme:theme"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+    "pytest>=8.3.5",
+    "ruff>=0.14.0",
+]
+
+[tool.uv]
+# Ignore releases newer than 3 days; declared here so CI resolves like local.
+exclude-newer = "3 days"
+
+[tool.mypy]
+files = ["src", "tests"]
+strict = true
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "D"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
