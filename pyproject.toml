@@ -21,6 +21,7 @@ classifiers = [
 
 [project.urls]
 Repository = "https://github.com/maxludden/zensical-gradient-theme"
+PyPI = "https://pypi.org/project/zensical-gradient-theme/"
 
 # Zensical loads installable themes from the MkDocs theme entry-point group.
 [project.entry-points."mkdocs.themes"]

@@ -1,5 +1,7 @@
 # zensical-gradient-theme
 
+[![PyPI](https://img.shields.io/pypi/v/zensical-gradient-theme)](https://pypi.org/project/zensical-gradient-theme/)
+
 A [Zensical](https://zensical.org) theme with animated rainbow-gradient accents
 and purple light/dark color schemes. It started as the docs theme for
 [rich-gradient](https://github.com/maxludden/rich-gradient) and works for any
@@ -20,8 +22,20 @@ What it gives you:
 
 ## Install
 
-The theme isn't on PyPI yet. Add it from GitHub to the dependency group that
-holds Zensical:
+The theme is on [PyPI](https://pypi.org/project/zensical-gradient-theme/). Add
+it to the dependency group that holds Zensical:
+
+```shell
+uv add --group docs zensical-gradient-theme
+```
+
+Or with pip:
+
+```shell
+pip install zensical-gradient-theme
+```
+
+To track unreleased changes, install from GitHub instead:
 
 ```shell
 uv add --group docs "zensical-gradient-theme @ git+https://github.com/maxludden/zensical-gradient-theme"
