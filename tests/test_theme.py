@@ -74,3 +74,88 @@ def test_theme_defaults_are_applied(built_site: Path) -> None:
     html = (built_site / "index.html").read_text()
     assert "navigation.instant" in html
     assert "Roboto+Mono" in html or "Roboto Mono" in html
+
+
+def test_each_scheme_restates_admonition_colors() -> None:
+    # The base theme computes admonition colors on :root from its light
+    # defaults; without these, admonitions render white in dark mode.
+    import re
+
+    css = (zgt.get_theme_dir() / "assets/stylesheets/gradient.css").read_text()
+    for scheme in ("gradient-dark", "gradient-light"):
+        block = re.search(
+            rf'\[data-md-color-scheme="{scheme}"\] \{{(.*?)\}}', css, re.S
+        )
+        assert block is not None
+        assert "--md-admonition-bg-color" in block.group(1)
+        assert "--md-admonition-fg-color" in block.group(1)
+
+
+ADMONITION_TYPES = {
+    "abstract": ("summary", "tldr"),
+    "info": ("todo",),
+    "tip": ("hint", "important"),
+    "success": ("check", "done"),
+    "question": ("help", "faq"),
+    "warning": ("caution", "attention"),
+    "failure": ("fail", "missing"),
+    "danger": ("error",),
+    "bug": (),
+    "example": (),
+    "quote": ("cite",),
+}
+
+
+def test_each_admonition_type_has_its_own_gradient() -> None:
+    # Every built-in type and alias sets its three gradient stops, and the
+    # rainbow fallback excludes exactly those types.
+    import re
+
+    css = (zgt.get_theme_dir() / "assets/stylesheets/gradient.css").read_text()
+    stops: dict[str, tuple[str, ...]] = {}
+    rules = re.findall(r"([^{}]+)\{([^{}]*--gradient-stop-1[^{}]*)\}", css)
+    for selectors, body in rules:
+        names = re.findall(r"\(\.admonition, details\)\.([a-z]+)", selectors)
+        values = tuple(re.findall(r"--gradient-stop-\d:\s*([^;]+);", body))
+        for name in names:
+            stops[name] = values
+
+    all_names = {n for t, aliases in ADMONITION_TYPES.items() for n in (t, *aliases)}
+    assert set(stops) == all_names
+    primaries = {stops[t] for t in ADMONITION_TYPES}
+    assert len(primaries) == len(ADMONITION_TYPES), "two types share a gradient"
+    for t, aliases in ADMONITION_TYPES.items():
+        for alias in aliases:
+            assert stops[alias] == stops[t]
+
+    fallback = re.search(r":not\(([^)]*)\)\s*\{\s*--gradient-admonition", css)
+    assert fallback is not None
+    excluded = {n.strip(" .\n") for n in fallback.group(1).split(",")}
+    assert excluded == all_names
+
+
+@pytest.mark.parametrize(
+    ("extra", "icon_path"),
+    [
+        ('repo_url = "https://github.com/me/demo"\n', "M216.5 362.5"),
+        ('repo_url = "https://gitlab.com/me/demo"\n', "m504 204.6"),
+        ('repo_url = "https://git.example.com/me/demo"\n', "M216.5 362.5"),
+    ],
+    ids=["github", "gitlab", "other-host-defaults-to-github"],
+)
+def test_repo_icon_follows_host(tmp_path: Path, extra: str, icon_path: str) -> None:
+    (tmp_path / "docs").mkdir()
+    (tmp_path / "docs" / "index.md").write_text("# Home\n")
+    (tmp_path / "zensical.toml").write_text(
+        f'[project]\nsite_name = "Demo"\n{extra}\n[project.theme]\nname = "gradient"\n'
+    )
+    subprocess.run(
+        [sys.executable, "-m", "zensical", "build", "--clean"],
+        cwd=tmp_path,
+        check=True,
+        capture_output=True,
+    )
+    html = (tmp_path / "site" / "index.html").read_text()
+    source = html[html.index('class="md-source"') :]
+    source = source[: source.index("</a>")]
+    assert icon_path in source

@@ -1,10 +1,20 @@
 # Demo site for previewing the theme: `uv run zensical serve`.
 [project]
-site_name = "Gradient theme"
+site_name = "Zensical Gradient Theme"
 site_description = "Preview of the zensical-gradient-theme."
+repo_name = "zensical-gradient-theme"
+repo_url = "https://github.com/maxludden/zensical-gradient-theme"
+nav = [
+    { "Home" = "index.md" },
+    { "Installation" = "installation.md" },
+    { "Getting Started" = "getting-started.md" },
+]
 
 [project.theme]
 name = "gradient"
+# Logo and favicon for this repo's docs only; not shipped with the theme.
+logo = "img/logo.svg"
+favicon = "img/logo.svg"
 
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.attr_list]
@@ -18,3 +28,4 @@ anchor_linenums = true
 [project.markdown_extensions.pymdownx.tabbed]
 alternate_style = true
 [project.markdown_extensions.tables]
+[project.markdown_extensions.pymdownx.keys]

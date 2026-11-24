@@ -1,19 +1,25 @@
+![Zensical Gradient Theme Banner](docs/img/zensical-gradient-theme-banner.svg)
+
 # zensical-gradient-theme
 
-[![PyPI](https://img.shields.io/pypi/v/zensical-gradient-theme)](https://pypi.org/project/zensical-gradient-theme/)
+[![PyPI](https://img.shields.io/pypi/v/zensical-gradient-theme)](https://pypi.org/project/zensical-gradient-theme/) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)   
 
-A [Zensical](https://zensical.org) theme with animated rainbow-gradient accents
-and purple light/dark color schemes. It started as the docs theme for
-[rich-gradient](https://github.com/maxludden/rich-gradient) and works for any
-Zensical (or Material-style) docs site.
+Gradient Theme is an installable [Zensical](https://zensical.org) theme that
+adds animated rainbow gradients to your docs. Links, the site title, the rule
+under each page title and every admonition shimmer over purple light and dark
+color schemes. Install it from PyPI and set `name = "gradient"`; no extra CSS or
+JavaScript is needed.
 
 What it gives you:
 
 - `gradient-dark` and `gradient-light` color schemes, with a system / light /
   dark toggle
 - Animated rainbow text on links, the active nav item and the site title, plus a
-  rainbow rule under each `h1`. The animation stops when the reader asks for
-  reduced motion.
+  rainbow rule under each `h1`
+- Admonitions and collapsible blocks with an animated gradient border, tinted
+  title and gradient-filled icon. Each type has its own gradient around its
+  usual color (warnings stay orange); notes use the full rainbow.
+- All animation stops when the reader asks for reduced motion
 - Calm, card-style API reference pages for
   [mkdocstrings](https://mkdocstrings.github.io/) output
 - Inter and Roboto Mono fonts, the classic variant, and a sensible feature list

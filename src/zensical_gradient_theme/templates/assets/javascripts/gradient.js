@@ -14,7 +14,12 @@
         var toast = document.createElement("div");
         toast.className = "gradient-toast";
         toast.setAttribute("role", "status");
-        toast.textContent = message;
+        // The message sits in its own span so CSS can clip a rainbow to the text
+        // while the toast itself paints the rainbow border.
+        var label = document.createElement("span");
+        label.className = "gradient-toast__text";
+        label.textContent = message;
+        toast.appendChild(label);
         document.body.appendChild(toast);
         void toast.offsetWidth; // force reflow so the transition runs
         toast.classList.add("visible");

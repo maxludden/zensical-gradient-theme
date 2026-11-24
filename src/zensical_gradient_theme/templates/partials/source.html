@@ -1,0 +1,22 @@
+{#- Repository link in the header. Overrides the base partial so the icon
+    defaults to the repository host's logo: GitHub, GitLab or Bitbucket when
+    repo_url points there, and GitHub for any other host. An explicit
+    theme.icon.repo in the project config always wins. -#}
+{%- set repo_host = config.repo_url | lower -%}
+{%- if config.theme.icon.repo -%}
+  {%- set icon = config.theme.icon.repo -%}
+{%- elif "gitlab" in repo_host -%}
+  {%- set icon = "fontawesome/brands/gitlab" -%}
+{%- elif "bitbucket" in repo_host -%}
+  {%- set icon = "fontawesome/brands/bitbucket" -%}
+{%- else -%}
+  {%- set icon = "fontawesome/brands/github" -%}
+{%- endif -%}
+<a href="{{ config.repo_url }}" title="{{ lang.t('source') }}" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  </div>
+  <div class="md-source__repository">
+    {{ config.repo_name }}
+  </div>
+</a>
